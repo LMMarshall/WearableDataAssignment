@@ -1,0 +1,33 @@
+The mean table shows the standard deviation and mean variables from Reyes-Ortiz et al's "Human Activity Recognition Using Smartphones Dataset
+Version 1.0". 
+
+It is tidy:
+- There is one variable per column, and each row represents a single measurement
+- I included descriptive column names for each variable. I renamed "subject" to "participant" for clarity, renamed the activities from numbers to 
+descriptive nouns, and I pulled the names from the features.txt as headers for the variables columns. They were already quite descriptive, 
+so I didn't change them much -- I just cleaned them up a bit, removing excess punctuation for ease of readability.
+- I arranged the data in order of participant ID number, where it was previously out of order.
+- This data set includes a script in R, "run_analysis.R" that shows the explicit recipe to go from the original raw data set to the tidy set. It is
+clearly annotated.
+- It includes the relevant original raw data from the original data set
+- The resulting data.table is saved in its own separate file.
+
+The variables in this data set represent the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ from use of a Samsung wearable. 
+Per the original documentation:
+
+"These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter 
+and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated 
+into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 
+0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). 
+Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, 
+tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, 
+fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions."
+
+Note that only the standard deviations and means of these measurements are included in this dataset.
